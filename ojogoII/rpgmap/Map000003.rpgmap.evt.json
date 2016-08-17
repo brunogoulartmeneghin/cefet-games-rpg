@@ -1,0 +1,203 @@
+{
+  "events":[
+    {
+      "id":1,
+      "name":"Event00001",
+      "x":10.5,
+      "y":14.5,
+      "states":[
+        {
+          "conditions":[
+            
+          ],
+          "height":0,
+          "affixDirection":false,
+          "trigger":1,
+          "animationType":0,
+          "runOnceThenIncrementState":false,
+          "cmds":[
+            {
+              "jsonClass":"Teleport",
+              "loc":{
+                "map":"Map000001.rpgmap",
+                "x":14.5,
+                "y":8.5
+              },
+              "transitionId":1
+            }
+          ]
+        }
+      ],
+      "eventClassId":-1,
+      "params":[
+        
+      ]
+    },
+    {
+      "id":2,
+      "name":"npc_rei",
+      "x":9.5,
+      "y":3.5,
+      "states":[
+        {
+          "conditions":[
+            
+          ],
+          "sprite":{
+            "name":"sys/vx_chara04_a.png",
+            "spriteIndex":0,
+            "dir":0,
+            "step":1
+          },
+          "height":1,
+          "affixDirection":false,
+          "trigger":5,
+          "animationType":2,
+          "runOnceThenIncrementState":false,
+          "cmds":[
+            {
+              "jsonClass":"SetEventSpeed",
+              "entitySpec":{
+                "whichEntityId":2,
+                "mapName":"Map000003.rpgmap",
+                "eventId":2
+              },
+              "speed":1.0
+            }
+          ]
+        }
+      ],
+      "eventClassId":-1,
+      "params":[
+        
+      ]
+    },
+    {
+      "id":5,
+      "name":"Event00003",
+      "x":10.5,
+      "y":2.5,
+      "states":[
+        {
+          "conditions":[
+            
+          ],
+          "sprite":{
+            "name":"sys/vx_chara04_a.png",
+            "spriteIndex":1,
+            "dir":0,
+            "step":1
+          },
+          "height":1,
+          "affixDirection":true,
+          "trigger":1,
+          "animationType":0,
+          "runOnceThenIncrementState":false,
+          "cmds":[
+            {
+              "jsonClass":"GetChoice",
+              "question":[
+                "Seja Bem vindo, Sr Cavalheiro! O que busca em meu reino?"
+              ],
+              "choices":[
+                "Venho em busca de desafios,vossa alteza. ",
+                "Cancelar."
+              ],
+              "allowCancel":false,
+              "innerCmds":[
+                [
+                  {
+                    "jsonClass":"GetChoice",
+                    "question":[
+                      "Assimm seja. Tenho um desafio, se acertar, você ganhará vinte moedas de ouro e poderá proseeguir com a sua viagem. Aceita?"
+                    ],
+                    "choices":[
+                      "Sim!",
+                      "No"
+                    ],
+                    "allowCancel":false,
+                    "innerCmds":[
+                      [
+                        {
+                          "jsonClass":"GetChoice",
+                          "question":[
+                            "A todas coisas ele devora, fera, aves, flora. Aço e ferro são sua comida, e a toda pedra por ele é moída. O que é?"
+                          ],
+                          "choices":[
+                            "Buraco Negro",
+                            "Tempo",
+                            "Guerra",
+                            "Nenhuma"
+                          ],
+                          "allowCancel":false,
+                          "innerCmds":[
+                            [
+                              
+                            ],
+                            [
+                              {
+                                "jsonClass":"ShowText",
+                                "lines":[
+                                  "Você recebeu: ",
+                                  " -20 gold"
+                                ],
+                                "useCharacterFace":false,
+                                "characterId":0
+                              },
+                              {
+                                "jsonClass":"AddRemoveGold",
+                                "add":true,
+                                "quantity":{
+                                  "jsonClass":"IntParameter",
+                                  "constant":20,
+                                  "valueTypeId":0,
+                                  "localVariable":"",
+                                  "globalVariable":""
+                                }
+                              }
+                            ],
+                            [
+                              
+                            ],
+                            [
+                              
+                            ],
+                            [
+                              
+                            ]
+                          ],
+                          "useCharacterFace":true,
+                          "characterId":0
+                        }
+                      ],
+                      [
+                        
+                      ],
+                      [
+                        
+                      ]
+                    ],
+                    "useCharacterFace":false,
+                    "characterId":0
+                  }
+                ],
+                [
+                  
+                ],
+                [
+                  
+                ]
+              ],
+              "useCharacterFace":true,
+              "characterId":0
+            }
+          ]
+        }
+      ],
+      "eventClassId":-1,
+      "params":[
+        
+      ]
+    }
+  ]
+}

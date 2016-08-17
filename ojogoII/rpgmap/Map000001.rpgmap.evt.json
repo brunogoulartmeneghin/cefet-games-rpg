@@ -1,0 +1,70 @@
+{
+  "events":[
+    {
+      "id":1,
+      "name":"Event00001",
+      "x":14.5,
+      "y":7.5,
+      "states":[
+        {
+          "conditions":[
+            
+          ],
+          "height":0,
+          "affixDirection":false,
+          "trigger":1,
+          "animationType":0,
+          "runOnceThenIncrementState":false,
+          "cmds":[
+            {
+              "jsonClass":"Teleport",
+              "loc":{
+                "map":"Map000003.rpgmap",
+                "x":9.5,
+                "y":13.5
+              },
+              "transitionId":1
+            }
+          ]
+        }
+      ],
+      "eventClassId":-1,
+      "params":[
+        
+      ]
+    },
+    {
+      "id":2,
+      "name":"Event00002",
+      "x":14.5,
+      "y":29.5,
+      "states":[
+        {
+          "conditions":[
+            
+          ],
+          "height":0,
+          "affixDirection":false,
+          "trigger":1,
+          "animationType":0,
+          "runOnceThenIncrementState":false,
+          "cmds":[
+            {
+              "jsonClass":"Teleport",
+              "loc":{
+                "map":"Map000002.rpgmap",
+                "x":15.5,
+                "y":0.5
+              },
+              "transitionId":1
+            }
+          ]
+        }
+      ],
+      "eventClassId":-1,
+      "params":[
+        
+      ]
+    }
+  ]
+}
